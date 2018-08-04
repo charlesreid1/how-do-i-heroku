@@ -1,5 +1,3 @@
-
-
 # Deploying a Flask app to Heroku
 
 [link](https://github.com/datademofun/heroku-basic-flask)

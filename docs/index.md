@@ -53,12 +53,7 @@ for prototyping but doesn't do very well as a production service. Gunicorn
 acts as middleware, more gracefully handling connections from clients and 
 making requests to the Flask app on their behalf.
 
-There are two flavors of Flask: flask, and bottle. While flask is itself
-very lightweight, bottle is even lighter-weight.
-
 [**Deploying flask apps on heroku**](flask.md) - a customizable python server
-
-[**Deploying bottle apps on heroku**](bottle.md) - an extremely lightweight python server
 
 ### Python: how do I use OAuth from a flask application on heroku?
 
@@ -75,7 +70,7 @@ This enables your app to request permissions from the user,
 have the user authenticate with Github, and gain access
 to the information about the user that you requested.
 
-[**Deploying Github OAuth flask app on heroku**](github.flask.md) - authenticating users 
+[**Deploying Github OAuth flask app on heroku**](github_flaskdance.md) - authenticating users 
 and controlling access to web content via github-based means (i.e., organization/team membership).
 
 ### Push to Deploy: how does push-to-deploy work with heroku?
