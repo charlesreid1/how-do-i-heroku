@@ -1,0 +1,114 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "How Do I Heroku?\n\u00b6\n\n\nHow do I use heroku? How do I deploy python apps? ruby apps? bots? How do I push to deploy with heroku? How do I set up custom domains with heroku?\n\n\nA how-to guide for using heroku.\n\n\nHTML pages for this tutorial (you are here): \nhttps://pages.charlesreid1.com/how-do-i-heroku/\n\n\nSource code for this tutorial: \nhttps://git.charlesreid1.com/charlesreid1/how-do-i-heroku\n\n\nMirror on Github: \nhttps://github.com/charlesreid1/how-do-i-heroku\n\n\nFrequently Asked Questions\n\u00b6\n\n\nBasics: What is heroku and how do I use it?\n\u00b6\n\n\nHeroku is a service that offers to run your code in the cloud.\n\n\nIn practice, this means that you can provide Heroku with a packaged\napplication, in your language of choice, and have Heroku deploy\nand run the packaged application on their servers.\n\n\n(This is similar to Google App Engine.)\n\n\nThe one catch is that your application is run as a stateless application,\nmeaning it cannot write to or read from disk dynamically; Heroku must \nbe able to tear it down and restart it from scratch.\n\n\nBasics: heroku paid vs free accounts\n\u00b6\n\n\nThe paid tier gets you access to machines (dynamos) with more resources,\nand prevents your apps from shutting off or \"spinning down\" after a period\nof inactivity.\n\n\nThe difference is not that significant, but \nis\n important for \nsome\n applications.\n\n\nBasics: installing heroku\n\u00b6\n\n\nHeroku offers a command line interface. To install it, see the page below:\n\n\nInstalling the heroku toolbelt\n - a guide to installing the\nHeroku toolbelt and getting it set up.\n\n\nPython: how do I deploy python apps to heroku?\n\u00b6\n\n\nIf you want to deploy a Python application to Heroku, it is recommended that you\nwrite a Flask application as the backend service, and wrap it with Gunicorn\non the frontend.\n\n\nBasically, Flask is a simple, single-threaded application that is intended\nfor prototyping but doesn't do very well as a production service. Gunicorn\nacts as middleware, more gracefully handling connections from clients and \nmaking requests to the Flask app on their behalf.\n\n\nDeploying flask apps on heroku\n - a customizable python server\n\n\nPython: how do I use OAuth from a flask application on heroku?\n\u00b6\n\n\nIf you are using flask as your web server, there are many libraries\nthat plug in to flask and offer OAuth authentication with various\nthird-party API services.\n\n\nOne that provides authentication with a variety of services is\n\nflask-dance\n.\nThis adds a blueprint (basically, a set of routes at \n/login\n)\nto the Flask app.\n\n\nThis enables your app to request permissions from the user,\nhave the user authenticate with Github, and gain access\nto the information about the user that you requested.\n\n\nDeploying Github OAuth flask app on heroku\n - authenticating users \nand controlling access to web content via github-based means (i.e., organization/team membership).\n\n\nPush to Deploy: how does push-to-deploy work with heroku?\n\u00b6\n\n\nBefore you begin, install the heroku toolbelt:\n\n\nInstalling the heroku toolbelt\n - a guide to installing the\nHeroku toolbelt and getting it set up.\n\n\nMake sure you are authenticated:\n\n\nheroku login\n\n\n\n\n\nNow from your git repository, add your Heroku project as a git remote:\n\n\nheroku git:remote -a my-cool-heroku-project\n\n\n\n\n\nThe github repository will now have a remote named \nheroku\n.\n\n\nLocally, the repository will have a branch named \nheroku-pages\n\nthat will store all of the actual content being deployed to Heroku.\n(This is the only branch deployed to Heroku, all others are ignored.)\n\n\nOn Heroku, this branch is called \nmaster\n, so the heroku command above\nkeeps this from getting overly confusing. It sets up the branch\n\nheroku-pages\n to track the branch \nmaster\n on the \nheroku\n remote.\n\n\nNow, when you're ready to deploy, you add/commit changes to the\n\nheroku-pages\n branch. Then you just push the \nheroku-pages\n branch\non your local machine to the \nmaster\n branch on the Heroku remote\nwith the command:\n\n\ngit push heroku heroku-pages:master\n\n\n\n\n\nExample: protecting a page with flask-oauth-dance\n\u00b6\n\n\nAlso see the answer to the OAuth question above.\n\n\nDeploying Github OAuth flask app on heroku\n - authenticating users \nand controlling access to web content via github-based means (i.e., organization/team membership).\n\n\nDatabases: how do I use an SQL database with a heroku app?\n\u00b6\n\n\n(TODO)\n\n\nCustom Domains: how do I set up custom domains with heroku?\n\u00b6\n\n\n(TODO)\n\n\nCustom Domains + SSL: how do I set up https with a custom domain?\n\u00b6\n\n\n(TODO)",
+            "title": "Index"
+        },
+        {
+            "location": "/#how-do-i-heroku",
+            "text": "How do I use heroku? How do I deploy python apps? ruby apps? bots? How do I push to deploy with heroku? How do I set up custom domains with heroku?  A how-to guide for using heroku.  HTML pages for this tutorial (you are here):  https://pages.charlesreid1.com/how-do-i-heroku/  Source code for this tutorial:  https://git.charlesreid1.com/charlesreid1/how-do-i-heroku  Mirror on Github:  https://github.com/charlesreid1/how-do-i-heroku",
+            "title": "How Do I Heroku?"
+        },
+        {
+            "location": "/#frequently-asked-questions",
+            "text": "",
+            "title": "Frequently Asked Questions"
+        },
+        {
+            "location": "/#basics-what-is-heroku-and-how-do-i-use-it",
+            "text": "Heroku is a service that offers to run your code in the cloud.  In practice, this means that you can provide Heroku with a packaged\napplication, in your language of choice, and have Heroku deploy\nand run the packaged application on their servers.  (This is similar to Google App Engine.)  The one catch is that your application is run as a stateless application,\nmeaning it cannot write to or read from disk dynamically; Heroku must \nbe able to tear it down and restart it from scratch.",
+            "title": "Basics: What is heroku and how do I use it?"
+        },
+        {
+            "location": "/#basics-heroku-paid-vs-free-accounts",
+            "text": "The paid tier gets you access to machines (dynamos) with more resources,\nand prevents your apps from shutting off or \"spinning down\" after a period\nof inactivity.  The difference is not that significant, but  is  important for  some  applications.",
+            "title": "Basics: heroku paid vs free accounts"
+        },
+        {
+            "location": "/#basics-installing-heroku",
+            "text": "Heroku offers a command line interface. To install it, see the page below:  Installing the heroku toolbelt  - a guide to installing the\nHeroku toolbelt and getting it set up.",
+            "title": "Basics: installing heroku"
+        },
+        {
+            "location": "/#python-how-do-i-deploy-python-apps-to-heroku",
+            "text": "If you want to deploy a Python application to Heroku, it is recommended that you\nwrite a Flask application as the backend service, and wrap it with Gunicorn\non the frontend.  Basically, Flask is a simple, single-threaded application that is intended\nfor prototyping but doesn't do very well as a production service. Gunicorn\nacts as middleware, more gracefully handling connections from clients and \nmaking requests to the Flask app on their behalf.  Deploying flask apps on heroku  - a customizable python server",
+            "title": "Python: how do I deploy python apps to heroku?"
+        },
+        {
+            "location": "/#python-how-do-i-use-oauth-from-a-flask-application-on-heroku",
+            "text": "If you are using flask as your web server, there are many libraries\nthat plug in to flask and offer OAuth authentication with various\nthird-party API services.  One that provides authentication with a variety of services is flask-dance .\nThis adds a blueprint (basically, a set of routes at  /login )\nto the Flask app.  This enables your app to request permissions from the user,\nhave the user authenticate with Github, and gain access\nto the information about the user that you requested.  Deploying Github OAuth flask app on heroku  - authenticating users \nand controlling access to web content via github-based means (i.e., organization/team membership).",
+            "title": "Python: how do I use OAuth from a flask application on heroku?"
+        },
+        {
+            "location": "/#push-to-deploy-how-does-push-to-deploy-work-with-heroku",
+            "text": "Before you begin, install the heroku toolbelt:  Installing the heroku toolbelt  - a guide to installing the\nHeroku toolbelt and getting it set up.  Make sure you are authenticated:  heroku login  Now from your git repository, add your Heroku project as a git remote:  heroku git:remote -a my-cool-heroku-project  The github repository will now have a remote named  heroku .  Locally, the repository will have a branch named  heroku-pages \nthat will store all of the actual content being deployed to Heroku.\n(This is the only branch deployed to Heroku, all others are ignored.)  On Heroku, this branch is called  master , so the heroku command above\nkeeps this from getting overly confusing. It sets up the branch heroku-pages  to track the branch  master  on the  heroku  remote.  Now, when you're ready to deploy, you add/commit changes to the heroku-pages  branch. Then you just push the  heroku-pages  branch\non your local machine to the  master  branch on the Heroku remote\nwith the command:  git push heroku heroku-pages:master",
+            "title": "Push to Deploy: how does push-to-deploy work with heroku?"
+        },
+        {
+            "location": "/#example-protecting-a-page-with-flask-oauth-dance",
+            "text": "Also see the answer to the OAuth question above.  Deploying Github OAuth flask app on heroku  - authenticating users \nand controlling access to web content via github-based means (i.e., organization/team membership).",
+            "title": "Example: protecting a page with flask-oauth-dance"
+        },
+        {
+            "location": "/#databases-how-do-i-use-an-sql-database-with-a-heroku-app",
+            "text": "(TODO)",
+            "title": "Databases: how do I use an SQL database with a heroku app?"
+        },
+        {
+            "location": "/#custom-domains-how-do-i-set-up-custom-domains-with-heroku",
+            "text": "(TODO)",
+            "title": "Custom Domains: how do I set up custom domains with heroku?"
+        },
+        {
+            "location": "/#custom-domains-ssl-how-do-i-set-up-https-with-a-custom-domain",
+            "text": "(TODO)",
+            "title": "Custom Domains + SSL: how do I set up https with a custom domain?"
+        },
+        {
+            "location": "/flask/",
+            "text": "Deploying a Flask app to Heroku\n\u00b6\n\n\nlink\n\n\nheroku requires us to put gunicorn in front of flask",
+            "title": "Heroku and Flask"
+        },
+        {
+            "location": "/flask/#deploying-a-flask-app-to-heroku",
+            "text": "link  heroku requires us to put gunicorn in front of flask",
+            "title": "Deploying a Flask app to Heroku"
+        },
+        {
+            "location": "/toolbelt/",
+            "text": "Installing the Heroku Toolbelt\n\u00b6\n\n\nAlso see \n\nheroku documentation: toolbelt installation instructions\n\n\nMac\n\u00b6\n\n\nOn a Mac, the Heroku toolbelt can be installed using Homebrew:\n\n\nbrew install heroku/brew/heroku\n\n\n\n\n\nLinux\n\u00b6\n\n\nOn Ubuntu, the Heroku toolbelt is installable with a shell script:\n\n\nsudo snap install heroku --classic\n\n\n\n\n\nSet Up Credentials\n\u00b6\n\n\nBefore using the toolbelt, you must authenticate with Heroku:\n\n\nheroku login\n\n\n\n\n\nThe heroku tool saves your email and the API token generated by\nthe above command to the file \n~/.netrc\n.",
+            "title": "Heroku Toolbelt"
+        },
+        {
+            "location": "/toolbelt/#installing-the-heroku-toolbelt",
+            "text": "Also see  heroku documentation: toolbelt installation instructions",
+            "title": "Installing the Heroku Toolbelt"
+        },
+        {
+            "location": "/toolbelt/#mac",
+            "text": "On a Mac, the Heroku toolbelt can be installed using Homebrew:  brew install heroku/brew/heroku",
+            "title": "Mac"
+        },
+        {
+            "location": "/toolbelt/#linux",
+            "text": "On Ubuntu, the Heroku toolbelt is installable with a shell script:  sudo snap install heroku --classic",
+            "title": "Linux"
+        },
+        {
+            "location": "/toolbelt/#set-up-credentials",
+            "text": "Before using the toolbelt, you must authenticate with Heroku:  heroku login  The heroku tool saves your email and the API token generated by\nthe above command to the file  ~/.netrc .",
+            "title": "Set Up Credentials"
+        },
+        {
+            "location": "/github_flaskdance/",
+            "text": "Github OAuth with Flask-Dance\n\u00b6\n\n\nBrief guide to using OAuth Flask-Dance to\ndo authentication using Github API.\n\n\nAlso see \nflask-dance-github",
+            "title": "Github OAuth"
+        },
+        {
+            "location": "/github_flaskdance/#github-oauth-with-flask-dance",
+            "text": "Brief guide to using OAuth Flask-Dance to\ndo authentication using Github API.  Also see  flask-dance-github",
+            "title": "Github OAuth with Flask-Dance"
+        }
+    ]
+}
