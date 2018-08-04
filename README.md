@@ -1,14 +1,17 @@
 # how do I heroku
 
-See [how do I heroku?](https://pages.charlesreid1.com/how-do-i-heroku)
-(the website).
+How do I use heroku? How do I deploy python apps? ruby apps? bots? How do I push to deploy with heroku? How do I set up custom domains with heroku?
 
-Source repository on git.charlesreid1.com [here](https://git.charlesreid1.com/charlesreid1/how-do-i-heroku).
+A how-to guide for using heroku.
 
-Source repository on github [here](https://github.com/charlesreid1/how-do-i-heroku).
+## Links
 
-[heroku-basic-flask](https://github.com/datademofun/heroku-basic-flask)
+HTML pages for this tutorial: <https://pages.charlesreid1.com/how-do-i-heroku/>
 
-gunicorn frontend around flask backend
+Source code for this tutorial: <https://git.charlesreid1.com/charlesreid1/how-do-i-heroku>
 
+Mirror on Github: <https://github.com/charlesreid1/how-do-i-heroku>
+
+Get started at the web page [how do I heroku?](https://pages.charlesreid1.com/how-do-i-heroku)
+or at [docs/index.md](docs/index.md).
 
