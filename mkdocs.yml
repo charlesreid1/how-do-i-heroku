@@ -21,7 +21,7 @@ theme:
   font:
     text: 'Bitter'
     code: 'PT Mono'
-pages:
+nav:
   - "Index" : "index.md"
   - "Heroku and Flask" : "flask.md"
   - "Heroku Toolbelt" : "toolbelt.md"
@@ -34,3 +34,6 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+
+
+strict: true
